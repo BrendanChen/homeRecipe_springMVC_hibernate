@@ -1,21 +1,9 @@
 package com.test;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.spring.config.AppConfig;
-import com.spring.domainObject.CookWayCode;
-import com.spring.entity.CookWayCodeVO;
-import com.spring.entity.IngredientVO;
-import com.spring.entity.KindCodeVO;
-import com.spring.entity.RecipeVO;
-import com.spring.service.CookWayCodeService;
-import com.spring.service.IngreService;
-import com.spring.service.KindCodeService;
-import com.spring.service.RcpService;
 
 public class MainApp {
 
@@ -117,15 +105,15 @@ public class MainApp {
 		// }
 
 		// 種類名稱
-		KindCodeService kindCodeService = context.getBean(KindCodeService.class);
-
-		List<KindCodeVO> list = kindCodeService.getAll();
-
-		for (KindCodeVO kindCodeVOs : list) {
-			System.out.print(kindCodeVOs.getKindName() + ",");
-			System.out.print(kindCodeVOs.getKindNo());
-			System.out.println("---------------------");
-		}
+//		KindCodeService kindCodeService = context.getBean(KindCodeService.class);
+//
+//		List<KindCodeVO> list = kindCodeService.getAll();
+//
+//		for (KindCodeVO kindCodeVOs : list) {
+//			System.out.print(kindCodeVOs.getKindName() + ",");
+//			System.out.print(kindCodeVOs.getKindNo());
+//			System.out.println("---------------------");
+//		}
 
 		// 料理方式
 		// CookWayCodeService cookWayCodeService =
