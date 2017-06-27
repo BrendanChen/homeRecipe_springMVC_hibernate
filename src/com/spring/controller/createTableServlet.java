@@ -1,4 +1,4 @@
-package com.test;
+package com.spring.controller;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -35,7 +35,7 @@ public class createTableServlet extends HttpServlet {
 //		List<String> list = new ArrayList<>();
 //
 //		list.add(
-//				"<div class='form-inline ingredient clearfix'><div class='form-group required maxlen'><input type='text'class='form-control ingredient-name required maxlen'placeholder='é£Ÿæ' name='name' required=''value=''></div><div class='form-group required maxlen'><input type='text'class='form-control ingredient-unit required maxlen'placeholder='ä»½é‡' name='quantity' required=''value=''></div><div class='pull-left edit-fn'><a class='btn btn-remove destroy removebtn' onclick='deleteIngredient()'></a></div></div>");
+//				"<div class='form-inline ingredient clearfix'><div class='form-group required maxlen'><input type='text'class='form-control ingredient-name required maxlen'placeholder='é£Ÿæ??' name='name' required=''value=''></div><div class='form-group required maxlen'><input type='text'class='form-control ingredient-unit required maxlen'placeholder='ä»½é??' name='quantity' required=''value=''></div><div class='pull-left edit-fn'><a class='btn btn-remove destroy removebtn' onclick='deleteIngredient()'></a></div></div>");
 //
 //		String json = new Gson().toJson(list);
 
@@ -77,7 +77,7 @@ public class createTableServlet extends HttpServlet {
 			
 		} catch (Exception e) {
 
-			System.out.println("æŸ¥ç„¡æª”æ¡ˆ...");
+			System.out.println("?Ÿ¥?„¡æª”æ??...");
 		}
 	}
 }

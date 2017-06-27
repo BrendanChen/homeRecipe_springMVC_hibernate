@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.websocket.Session;
+
 
 import com.spring.entity.RecipeVO;
 import com.spring.service.RcpServiceImpl;
@@ -47,7 +47,7 @@ public class RcpServlet extends HttpServlet {
 			List<String> errorMsgs = new LinkedList<String>();
 			req.setAttribute("errorMsgs", errorMsgs);
 
-			// 1.將輸入資料轉為map
+			// 1.撠撓�鞈��map
 
 			try {
 				HttpSession session = req.getSession();
@@ -66,20 +66,20 @@ public class RcpServlet extends HttpServlet {
 					map = (HashMap<String, String[]>) req.getParameterMap();
 				}
 
-				// 2. 開始複合查詢
+				// 2. �����閰�
 
 				RcpServiceImpl rcpServiceImpl = new RcpServiceImpl();
 
-				List<RecipeVO> list = rcpServiceImpl.findByCriteria(map); // 傳入物件為map
+				List<RecipeVO> list = rcpServiceImpl.findByCriteria(map); // ���隞嗥map
 
-				// 3. 查詢完成，準備轉交
+				// 3. �閰Ｗ������漱
 				req.setAttribute("list", list);
 
 				RequestDispatcher failureView = req.getRequestDispatcher("/recipe/listRcpByCriteriaQuery.jsp");
 
 				failureView.forward(req, res);
 
-				// 4. 其他可能的錯誤處理
+				// 4. �隞���隤方���
 			} catch (Exception e) {
 
 				errorMsgs.add(e.getMessage());
@@ -99,7 +99,7 @@ public class RcpServlet extends HttpServlet {
 
 				req.setAttribute("rcp_seq", rcpSeq);
 
-				// 準備轉交
+				// 皞��漱
 				RequestDispatcher requestDispatcher = req.getRequestDispatcher("/recipe/listOneRecipe.jsp");
 
 				requestDispatcher.forward(req, res);
@@ -152,7 +152,7 @@ public class RcpServlet extends HttpServlet {
 				
 				rcpServiceImpl.addRcpData(recipeVO);	
 					
-				// 準備轉交
+				// 皞��漱
 //				RequestDispatcher requestDispatcher = req.getRequestDispatcher("/recipe/listOneRecipe.jsp");
 //
 //				requestDispatcher.forward(req, res);

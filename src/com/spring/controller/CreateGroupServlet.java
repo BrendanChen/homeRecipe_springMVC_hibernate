@@ -1,4 +1,4 @@
-package com.test;
+package com.spring.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class CreateGroupServlet extends HttpServlet {
 	    List<String> list = new ArrayList<>();
 	    
 
-	    list.add("<div class='group group-"+ str +"'><div class=''><div class='form-inline group-name clearfix'><div class='form-group required maxlen'><input type='text' class='form-control required maxlen'placeholder='åˆ†çµ„åç¨±ï¼ˆä¾‹å¦‚ï¼šé†¬æ±ï¼‰' name='groupName' required='' value=''></div><div class='pull-right'><a class='btn btn-remove destroy deleteGroup' onclick='deleteGroup()'></a></div></div></div><div><button type='button' class='btn btn-add-ingredient addIngre'>åŠ å…¥é£Ÿæ</button></div></div>");
+	    list.add("<div class='group group-"+ str +"'><div class=''><div class='form-inline group-name clearfix'><div class='form-group required maxlen'><input type='text' class='form-control required maxlen'placeholder='??†ç?„å?ç¨±ï¼ˆä?‹å?‚ï?šé†¬æ±ï??' name='groupName' required='' value=''></div><div class='pull-right'><a class='btn btn-remove destroy deleteGroup' onclick='deleteGroup()'></a></div></div></div><div><button type='button' class='btn btn-add-ingredient addIngre'>?? å…¥é£Ÿæ??</button></div></div>");
 	    
 	    
 	    String json = new Gson().toJson(list);

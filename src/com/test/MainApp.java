@@ -3,13 +3,13 @@ package com.test;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.spring.config.AppConfig;
+import com.spring.config.SpringRootConfig;
 
 public class MainApp {
 
 	public static void main(String[] args) {
 
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringRootConfig.class);
 
 		// 食譜
 		// RcpService rcpService = context.getBean(RcpService.class);
